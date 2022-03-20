@@ -23,18 +23,18 @@ let passwordLength="";
 //   prompt2)
 // };
 
-// let prompt1=prompt("Please enter a length of at least 8 characters and no more than 128 characters.");
-// let prompt2=promt("Would you like your password to include uppercase characters?");
-// let prompt3=prompt("Would you like your password to include lowercase characters?");
-// let prompt4 =prompt("Would you like your password to include numeric characters?");
-// let  prompt5 =prompt("Would you like your password to include special characters?");
+let prompt1=prompt("Please enter a length of at least 8 characters and no more than 128 characters.");
+let prompt2=prompt("Would you like your password to include uppercase characters?");
+let prompt3=prompt("Would you like your password to include lowercase characters?");
+let prompt4 =prompt("Would you like your password to include numeric characters?");
+let prompt5 =prompt("Would you like your password to include special characters?");
 
 
   
 
 
 function writePassword() {
-   let password = generatePassword();
+   let inputValue = generatePassword();
    let passwordText = document.querySelector("#password");
    passwordText.value = password;
 };
@@ -46,12 +46,12 @@ function generatePassword ()
 };
 
 function prompt() {
-  inputValue = prompt("Please enter a length of at least 8 characters and no more than 128 characters.");
+  inputValue = prompt("Please enter a length of at least 8 characters and no more than 128 characters.", 8 < 128);
   if(isNaN(inputValue) || inputValue < 8 || inputValue > 128) {
     alert("ERROR! Please enter a valid number.")
     return false
   }}
-    if (confirm("Would you like your password to include uppercase characters?")) {
+    if (("Would you like your password to include uppercase characters?")) {
     inputValue = inputValue.concat(uChar)
     }
     if (confirm("Would you like your password to include lowercase characters?")) {
